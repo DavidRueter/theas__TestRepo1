@@ -1,6 +1,6 @@
 <template>
   <div>
-  <p>Hello World!!</p>
+  <p>Hello World!!!</p>
 
     <JqxBarGauge ref="barGaugeReference"
         :width="600" :height="600" 
