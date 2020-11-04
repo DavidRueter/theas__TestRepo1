@@ -1,18 +1,41 @@
-PHRlbXBsYXRlPg0KICA8ZGl2Pg0KICA8cD5IZWxsbyBXb3JsZDwvcD4NCg0K
-ICAgIDxKcXhCYXJHYXVnZSByZWY9ImJhckdhdWdlUmVmZXJlbmNlIg0KICAg
-ICAgICA6d2lkdGg9IjYwMCIgOmhlaWdodD0iNjAwIiANCiAgICAgICAgOnZh
-bHVlcz0idmFsdWVzIiA6Zm9ybWF0RnVuY3Rpb249ImZvcm1hdEZ1bmN0aW9u
-Ig0KICAgID4NCiAgICA8L0pxeEJhckdhdWdlPg0KDQogIDwvZGl2Pg0KPC90
-ZW1wbGF0ZT4NCiANCjxzY3JpcHQ+DQogICAgaW1wb3J0IEpxeEJhckdhdWdl
-IGZyb20gJy9jZG4vanF3L2pxd2lkZ2V0cy12dWUvdnVlX2pxeGJhcmdhdWdl
-LnZ1ZSc7DQogDQogICAgZXhwb3J0IGRlZmF1bHQgew0KICAgICAgICBjb21w
-b25lbnRzOiB7DQogICAgICAgICAgICBKcXhCYXJHYXVnZQ0KICAgICAgICB9
-LA0KICAgICAgICBkYXRhOiBmdW5jdGlvbiAoKSB7DQogICAgICAgICAgICBy
-ZXR1cm4gew0KICAgICAgICAgICAgICAgIHZhbHVlczogWzEwLCAyMCwgMzAs
-IDQwLCA1MF0sDQoNCiAgICAgICAgICAgIH0NCiAgICAgICAgfSwNCg0KDQog
-ICAgICAgIG1ldGhvZHM6IHsNCiAgICAgICAgICAgIGZvcm1hdEZ1bmN0aW9u
-OiBmdW5jdGlvbiAodmFsdWUsIGluZGV4LCBjb2xvcikgew0KICAgICAgICAg
-ICAgICAgIHJldHVybiBjb2xvcjsNCiAgICAgICAgICAgIH0sDQoNCiAgICAg
-ICAgfQ0KICAgIH0NCjwvc2NyaXB0Pg0KDQo8c3R5bGU+DQogICAgaDEgICB7
-Y29sb3I6IGJsdWU7fQ0KICAgIHAgICAge2NvbG9yOiByZWQ7fSAgICANCjwv
-c3R5bGU+DQo=
+<template>
+  <div>
+  <p>Hello World</p>
+
+    <JqxBarGauge ref="barGaugeReference"
+        :width="600" :height="600" 
+        :values="values" :formatFunction="formatFunction"
+    >
+    </JqxBarGauge>
+
+  </div>
+</template>
+ 
+<script>
+    import JqxBarGauge from '/cdn/jqw/jqwidgets-vue/vue_jqxbargauge.vue';
+ 
+    export default {
+        components: {
+            JqxBarGauge
+        },
+        data: function () {
+            return {
+                values: [10, 20, 30, 40, 50],
+
+            }
+        },
+
+
+        methods: {
+            formatFunction: function (value, index, color) {
+                return color;
+            },
+
+        }
+    }
+</script>
+
+<style>
+    h1   {color: blue;}
+    p    {color: red;}    
+</style>
