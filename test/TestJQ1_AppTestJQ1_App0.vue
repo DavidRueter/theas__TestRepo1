@@ -1,6 +1,7 @@
 <template>
   <div>
   <p>Hello World</p>
+
     <JqxBarGauge ref="barGaugeReference"
         :width="600" :height="600" 
         :values="values" :formatFunction="formatFunction"
